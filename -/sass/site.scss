@@ -1,0 +1,487 @@
+// Base
+
+
+* { margin: 0; }
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	}
+
+body {
+	height: 100%;
+	@include font-size();
+	line-height: 23px;
+	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: rgb(150, 130, 106);
+	background: rgb(240, 236, 223);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	}
+
+#page {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -93px auto;
+	@include group();
+	}
+
+.push { height: 93px; }
+
+.inner-wrap {
+	width: 940px;
+	margin: 0 auto;
+	@include group();
+	}
+
+select, input, textarea {
+	@include font-size();
+	line-height: 23px;
+	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	}
+
+a {
+
+	color: rgb(1, 63, 31);
+	text-decoration: none;
+
+	&:hover {}
+
+}
+
+::-moz-selection {}
+
+::selection {} 
+
+ins {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	}
+
+mark {
+	color: rgb(0, 0, 0);
+	font-style: italic;
+	font-weight: 700;
+	}
+
+
+// Header
+
+
+#header {
+
+	background: rgb(1, 63, 31) url(/-/media/shadow.png) left top repeat-x;
+
+	.inner-wrap { position: relative; }
+
+}
+
+	#logo {
+
+		position: relative;
+		left: -10px;
+		float: left;
+		@include hide-text();
+		
+		a {
+		
+			display: block;
+			width: 230px;
+			height: 65px;
+			background: url(/-/media/logo.png);
+		
+			&:hover {}
+			
+		}
+		
+	}
+
+	nav {
+
+		float: right;
+		padding-right: 26px;
+
+		ol { @include group(); }
+
+			li {
+				float: left;
+				@include font-size(13);
+				font-weight: 700;
+				text-transform: uppercase;
+				}
+
+				a {
+
+					display: block;
+					height: 44px;
+					padding: 21px 15px 0 15px;
+					color: rgb(185, 163, 138);
+					-webkit-transition: color .5s;
+					-moz-transition: color .5s;
+					transition: color .5s;
+
+					&:hover { color: rgb(207, 177, 43); }
+
+				}
+
+	}
+
+	.facebook {
+
+		position: absolute;
+		right: 0;
+		top: 21px;
+		@include hide-text();
+		z-index: 5;
+
+		.ie7 & { top: 22px; }
+
+		a {
+
+			display: block;
+			width: 21px;
+			height: 21px;
+			background: url(/-/media/facebook.png);
+
+			&:hover { background-position: -21px 0; }
+
+		}
+
+	}
+
+
+// Body
+
+
+#body {}
+
+	.section {
+		
+		padding: 25px 0;
+
+		.introduction {
+
+			@include visuallyhidden();	
+			color: rgb(1, 63, 31);
+		
+			h2 {}
+
+		}
+		
+		&.featured {
+
+			height: 376px;
+			padding: 130px 0 40px 0;
+			background: rgb(207, 177, 43) url(/-/media/featured-background.jpg) center top no-repeat;
+			
+			h3 {
+				position: absolute;
+				left: 15px;
+				bottom: 15px;
+				height: 27px;
+				width: 605px;
+				padding: 3px 0 0 35px;
+				color: rgb(99, 86, 70);
+				background: rgb(165, 143, 118);
+				z-index: 5;
+				}
+		
+		}
+
+		&.excited {
+		
+			background: rgb(170, 151, 125) url(/-/media/shadow.png) left top repeat-x;
+
+			.inner-wrap {
+				width: 670px;
+				padding-right: 270px;
+				}
+
+			p {
+
+				@include font-size(21);
+				line-height: 35px;
+				text-align: justify;
+				font-weight: 700;
+				color: rgb(240, 236, 223);
+
+				.ie7 &,
+				.ie8 & { letter-spacing: -1px; }
+
+			}
+
+		}
+
+		&.benefits {
+
+			padding: 0 0 150px 0;
+			background: url(/-/media/stars.png) center bottom repeat-x;
+
+			.inner-wrap {
+				width: 670px;
+				padding: 30px 270px 0 0;
+				background: url(/-/media/stamp.png) right top no-repeat;
+				}
+
+			h3 {
+				margin-bottom: 18px;
+				@include font-size(20);
+				font-weight: 700;
+				color: rgb(3, 91, 46);
+				}
+
+			ul {}
+
+			ol {}
+
+				li {
+
+					margin-bottom: 18px;
+					font-weight: 700;
+
+					em {
+						display: block;
+						@include font-size(14);
+						line-height: 16px;
+						font-weight: 400;
+						}
+
+				}
+
+			ol {
+			
+				li {
+					@include font-size(12);
+					line-height: 16px;
+					font-weight: 400;
+					}
+				
+			}
+			
+			p {
+				margin-bottom: 18px;
+				font-weight: 700;
+				}
+
+			sup {
+			
+				position: relative;
+				left: 3px;
+				@include font-size(9);
+
+				.ie9 & { @include font-size(11); }
+			
+				a { color: rgb(150, 130, 106); }
+			
+			}
+
+		}
+
+	}
+
+	// Flexslider
+
+	.flexslider {
+		position: relative;
+		width: 640px;
+		height: 276px;
+		margin: 0;
+		padding: 45px 15px 55px 15px;
+		background: rgb(255, 255, 255) url(/-/media/slide-background.jpg);
+		z-index: 1;
+		}
+
+	.flexslider .slides > li {
+		display: none;
+		-webkit-backface-visibility: hidden;
+		}
+
+	.flexslider .slides img {
+		width: 100%;
+		display: block;
+		}
+
+	.flex-pauseplay span { text-transform: capitalize; }
+
+	// Slide Thumbnails
+
+	.flex-control-thumbs {
+
+		position: absolute;
+		right: -270px;
+		top: 0;
+
+		li {
+			margin-bottom: 11px;
+			background: rgb(255, 255, 255) url(/-/media/thumbnail-background.jpg);
+			cursor: pointer;
+
+			&:last-child { margin: 0; }
+
+			.ie7 & {
+				margin-bottom: 8px;
+				height: 118px;
+				}
+
+			.ie8 & { width: 255px; }
+
+		}
+
+			img {
+
+				display: block;
+				width: 245px;
+				padding: 5px;
+				height: 108px;
+
+				.ie7 & { margin: 0; }
+
+			}
+		
+			.flex-active { background: rgb(66, 111, 69); }
+	
+	}
+
+	// Slide Prev/Next
+
+	.flex-direction-nav {
+
+		position: absolute;
+		right: 15px;
+		bottom: 15px;
+		z-index: 10;
+
+		li {
+			float: left;
+			@include hide-text();
+			}
+		
+			a {
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: url(/-/media/arrows.png);
+				}
+			
+			.flex-prev {}
+			
+			.flex-next { background-position: -30px 0; }
+	
+	}
+	
+	/* Clearfix for the .slides element */
+
+	.slides:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+		} 
+
+	html[xmlns] .slides { display: block; } 
+
+	* html .slides { height: 1%; }
+	
+	/* No JavaScript Fallback */
+
+	/* If you are not using another script, such as Modernizr, make sure you
+	* include js that eliminates this class on page load */
+
+	.no-js .slides > li:first-child { display: block; }
+
+
+// Footer
+
+
+#footer {
+
+	height: 65px;
+	padding-bottom: 28px;
+	background: rgb(1, 63, 31) url(/-/media/shadow.png) left top repeat-x;
+
+	nav {
+
+		position: relative;
+		left: -15px;
+		float: left;
+		z-index: 1;
+
+		li { @include font-size(12); }
+
+	}
+
+	p {
+
+		float: right;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		small {
+
+			display: block;
+			height: 44px;
+			padding: 21px 15px 0 15px;
+			@include font-size(12);
+			color: rgb(185, 163, 138);
+
+		.ie8 &,
+		.ie9 & {
+			position: relative;
+			top: -9px;
+			}
+
+			.sep {
+
+				position: relative;
+				top: -3px;
+				display: inline-block;
+				width: 32px;
+				height: 25px;
+				margin: 0 7px;
+				@include hide-text();
+				background: url(/-/media/equal-housing-lender.png);
+
+				.ie7 & {
+					top: 0;
+					left: 6px;
+					}
+
+				.ie8 &,
+				.ie9 & { top: 6px; }
+
+			}
+
+		}
+
+	}
+
+}
+
+@-moz-document url-prefix() {
+	
+	#footer {
+	
+		p {
+		
+			small {
+
+				position: relative;
+				top: -9px;
+		
+				.sep { top: 5px; }
+			
+			}
+			
+		}
+	
+	}
+	
+}

@@ -1,0 +1,496 @@
+/* Reset */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+img {
+  max-width: 100%; }
+  #map_canvas img, .ie8 #author-avatar img {
+    max-width: none; }
+  .ie7 img {
+    -ms-interpolation-mode: bicubic; }
+
+html {
+  overflow-y: scroll; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+  a:hover, a:active {
+    outline: none; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #eae4cf;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  font: 100%; }
+  table th {
+    font-weight: bold;
+    vertical-align: bottom; }
+  table td {
+    font-weight: normal;
+    vertical-align: top; }
+    table td img {
+      vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word; }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+sub, sup {
+  font-size: 100%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer; }
+
+button, input, select, textarea {
+  margin: 0; }
+
+button {
+  width: auto;
+  overflow: visible; }
+
+.group:before, .group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1; }
+
+* {
+  margin: 0; }
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  height: 100%;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 23px;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #96826a;
+  background: #f0ecdf;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+#page {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -93px auto;
+  zoom: 1; }
+  #page:before, #page:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  #page:after {
+    clear: both; }
+
+.push {
+  height: 93px; }
+
+.inner-wrap {
+  width: 940px;
+  margin: 0 auto;
+  zoom: 1; }
+  .inner-wrap:before, .inner-wrap:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .inner-wrap:after {
+    clear: both; }
+
+select, input, textarea {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 23px;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+
+a {
+  color: #013f1f;
+  text-decoration: none; }
+
+ins {
+  color: black;
+  text-decoration: none; }
+
+mark {
+  color: black;
+  font-style: italic;
+  font-weight: 700; }
+
+#header {
+  background: #013f1f url(/-/media/shadow.png) left top repeat-x; }
+  #header .inner-wrap {
+    position: relative; }
+
+#logo {
+  position: relative;
+  left: -10px;
+  float: left;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden; }
+  #logo a {
+    display: block;
+    width: 230px;
+    height: 65px;
+    background: url(/-/media/logo.png); }
+
+nav {
+  float: right;
+  padding-right: 26px; }
+  nav ol {
+    zoom: 1; }
+    nav ol:before, nav ol:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    nav ol:after {
+      clear: both; }
+  nav li {
+    float: left;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+  nav a {
+    display: block;
+    height: 44px;
+    padding: 21px 15px 0 15px;
+    color: #b9a38a;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    transition: color .5s; }
+    nav a:hover {
+      color: #cfb12b; }
+
+.facebook {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 5; }
+  .ie7 .facebook {
+    top: 22px; }
+  .facebook a {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(/-/media/facebook.png); }
+    .facebook a:hover {
+      background-position: -21px 0; }
+
+.section {
+  padding: 25px 0; }
+  .section .introduction {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    color: #013f1f; }
+    .section .introduction.focusable
+    .section .introduction:active, .section .introduction:focus {
+      position: static;
+      clip: auto;
+      height: auto;
+      width: auto;
+      margin: 0;
+      overflow: visible; }
+  .section.featured {
+    height: 376px;
+    padding: 130px 0 40px 0;
+    background: #cfb12b url(/-/media/featured-background.jpg) center top no-repeat; }
+    .section.featured h3 {
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      height: 27px;
+      width: 605px;
+      padding: 3px 0 0 35px;
+      color: #635646;
+      background: #a58f76;
+      z-index: 5; }
+  .section.excited {
+    background: #aa977d url(/-/media/shadow.png) left top repeat-x; }
+    .section.excited .inner-wrap {
+      width: 670px;
+      padding-right: 270px; }
+    .section.excited p {
+      font-size: 21px;
+      font-size: 2.1rem;
+      line-height: 35px;
+      text-align: justify;
+      font-weight: 700;
+      color: #f0ecdf; }
+      .ie7 .section.excited p, .ie8 .section.excited p {
+        letter-spacing: -1px; }
+  .section.benefits {
+    padding: 0 0 150px 0;
+    background: url(/-/media/stars.png) center bottom repeat-x; }
+    .section.benefits .inner-wrap {
+      width: 670px;
+      padding: 30px 270px 0 0;
+      background: url(/-/media/stamp.png) right top no-repeat; }
+    .section.benefits h3 {
+      margin-bottom: 18px;
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #035b2e; }
+    .section.benefits li {
+      margin-bottom: 18px;
+      font-weight: 700; }
+      .section.benefits li em {
+        display: block;
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 16px;
+        font-weight: 400; }
+    .section.benefits ol li {
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 16px;
+      font-weight: 400; }
+    .section.benefits p {
+      margin-bottom: 18px;
+      font-weight: 700; }
+    .section.benefits sup {
+      position: relative;
+      left: 3px;
+      font-size: 9px;
+      font-size: 0.9rem; }
+      .ie9 .section.benefits sup {
+        font-size: 11px;
+        font-size: 1.1rem; }
+      .section.benefits sup a {
+        color: #96826a; }
+
+.flexslider {
+  position: relative;
+  width: 640px;
+  height: 276px;
+  margin: 0;
+  padding: 45px 15px 55px 15px;
+  background: white url(/-/media/slide-background.jpg);
+  z-index: 1; }
+
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden; }
+
+.flexslider .slides img {
+  width: 100%;
+  display: block; }
+
+.flex-pauseplay span {
+  text-transform: capitalize; }
+
+.flex-control-thumbs {
+  position: absolute;
+  right: -270px;
+  top: 0; }
+  .flex-control-thumbs li {
+    margin-bottom: 11px;
+    background: white url(/-/media/thumbnail-background.jpg);
+    cursor: pointer; }
+    .flex-control-thumbs li:last-child {
+      margin: 0; }
+    .ie7 .flex-control-thumbs li {
+      margin-bottom: 8px;
+      height: 118px; }
+    .ie8 .flex-control-thumbs li {
+      width: 255px; }
+  .flex-control-thumbs img {
+    display: block;
+    width: 245px;
+    padding: 5px;
+    height: 108px; }
+    .ie7 .flex-control-thumbs img {
+      margin: 0; }
+  .flex-control-thumbs .flex-active {
+    background: #426f45; }
+
+.flex-direction-nav {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  z-index: 10; }
+  .flex-direction-nav li {
+    float: left;
+    text-indent: -9999px;
+    white-space: nowrap;
+    overflow: hidden; }
+  .flex-direction-nav a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(/-/media/arrows.png); }
+  .flex-direction-nav .flex-next {
+    background-position: -30px 0; }
+
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+html[xmlns] .slides {
+  display: block; }
+
+* html .slides {
+  height: 1%; }
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+* include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+  display: block; }
+
+#footer {
+  height: 65px;
+  padding-bottom: 28px;
+  background: #013f1f url(/-/media/shadow.png) left top repeat-x; }
+  #footer nav {
+    position: relative;
+    left: -15px;
+    float: left;
+    z-index: 1; }
+    #footer nav li {
+      font-size: 12px;
+      font-size: 1.2rem; }
+  #footer p {
+    float: right;
+    font-weight: 700;
+    text-transform: uppercase; }
+    #footer p small {
+      display: block;
+      height: 44px;
+      padding: 21px 15px 0 15px;
+      font-size: 12px;
+      font-size: 1.2rem;
+      color: #b9a38a; }
+      .ie8 #footer p small, .ie9 #footer p small {
+        position: relative;
+        top: -9px; }
+      #footer p small .sep {
+        position: relative;
+        top: -3px;
+        display: inline-block;
+        width: 32px;
+        height: 25px;
+        margin: 0 7px;
+        text-indent: -9999px;
+        white-space: nowrap;
+        overflow: hidden;
+        background: url(/-/media/equal-housing-lender.png); }
+        .ie7 #footer p small .sep {
+          top: 0;
+          left: 6px; }
+        .ie8 #footer p small .sep, .ie9 #footer p small .sep {
+          top: 6px; }
+
+@-moz-document url-prefix() {
+  #footer p small {
+    position: relative;
+    top: -9px; }
+    #footer p small .sep {
+      top: 5px; } }
